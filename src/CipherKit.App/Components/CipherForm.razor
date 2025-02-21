@@ -1,28 +1,30 @@
+@inject IStringLocalizer<Resource> Localizer
+
 @typeparam TParams
 <div class="card shadow-sm my-3">
     <div class="card-header text-center">
-        <h5 class="mb-0">Cipher Operation</h5>
+        <h5 class="mb-0">@Localizer["CipherForm.CipherOperation"]</h5>
     </div>
     <div class="card-body">
         <div class="mb-3">
-            <label class="form-label">Input</label>
-            <textarea class="form-control" spellcheck="false" @bind="InputText" placeholder="" rows="4"></textarea>
+            <label class="form-label">@Localizer["Input"]</label>
+            <textarea class="form-control" spellcheck="false" @bind="InputText" rows="4"></textarea>
         </div>
         @ChildContent
         <div class="d-flex justify-content-between mb-3">
             <button class="btn btn-primary" @onclick="Encrypt">
-                <i class="bi bi-lock-fill me-1"></i> Encrypt
+                <i class="bi bi-lock-fill me-1"></i> @Localizer["Encrypt"]
             </button>
             <button class="btn btn-secondary" @onclick="Decrypt">
-                <i class="bi bi-unlock-fill me-1"></i> Decrypt
+                <i class="bi bi-unlock-fill me-1"></i> @Localizer["Decrypt"]
             </button>
         </div>
         <div>
-            <label class="form-label">Result</label>
+            <label class="form-label">@Localizer["Result"]</label>
             <div class="p-3 rounded">
                 @if (string.IsNullOrEmpty(Result))
                 {
-                    <span>Result will appear here...</span>
+                    <span>@Localizer["Result.Placeholder"]</span>
                 }
                 else
                 {

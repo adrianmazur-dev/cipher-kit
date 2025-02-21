@@ -1,4 +1,6 @@
-﻿<nav class="d-flex flex-column vh-100">
+﻿@inject IStringLocalizer<Resource> Localizer
+
+<nav class="d-flex flex-column vh-100">
     <div class="p-3">
         <a class="navbar-brand" href="">
             <i class="bi bi-shield-lock me-1"></i> CipherKit
@@ -7,12 +9,12 @@
     <ul class="nav flex-column flex-grow-1">
         <li class="nav-item">
             <NavLink class="nav-link" href="/ciphers/caesar">
-                <i class="bi bi-key-fill me-1"></i>Caesar
+                <i class="bi bi-key-fill me-1"></i>@Localizer["Caesar.Title"]
             </NavLink>
         </li>
         <li class="nav-item">
             <NavLink class="nav-link" href="/ciphers/playfair">
-                <i class="bi bi-key-fill me-1"></i>Playfair
+                <i class="bi bi-key-fill me-1"></i>@Localizer["Playfair.Title"]
             </NavLink>
         </li>
     </ul>
