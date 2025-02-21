@@ -1,0 +1,31 @@
+﻿@using CipherKit.App.Shared.ResourceFiles
+@using Microsoft.Extensions.Localization
+
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@inject IStringLocalizer<Resource> Localizer
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <button class="btn btn-primary" @onclick="ToggleTheme">
+                @Localizer["ToggleTheme"]
+            </button>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private async Task ToggleTheme()
+    {
+        await JSRuntime.InvokeVoidAsync("toggleTheme");
+    }
+}

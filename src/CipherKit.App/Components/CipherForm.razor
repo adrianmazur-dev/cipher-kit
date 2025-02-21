@@ -1,0 +1,53 @@
+@typeparam TParams
+<div class="card shadow-sm my-3">
+    <div class="card-header text-center">
+        <h5 class="mb-0">Cipher Operation</h5>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Input</label>
+            <textarea class="form-control" spellcheck="false" @bind="InputText" placeholder="" rows="4"></textarea>
+        </div>
+        @ChildContent
+        <div class="d-flex justify-content-between mb-3">
+            <button class="btn btn-primary" @onclick="Encrypt">
+                <i class="bi bi-lock-fill me-1"></i> Encrypt
+            </button>
+            <button class="btn btn-secondary" @onclick="Decrypt">
+                <i class="bi bi-unlock-fill me-1"></i> Decrypt
+            </button>
+        </div>
+        <div>
+            <label class="form-label">Result</label>
+            <div class="p-3 rounded">
+                @if (string.IsNullOrEmpty(Result))
+                {
+                    <span>Result will appear here...</span>
+                }
+                else
+                {
+                    @Result
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public Func<string, TParams, Task<string>> OnEncrypt { get; set; }
+    [Parameter] public Func<string, TParams, Task<string>> OnDecrypt { get; set; }
+    [Parameter] public TParams Parameters { get; set; }
+
+    public string InputText { get; set; }
+    public string Result { get; set; }
+
+    private async Task Encrypt() {
+        if (OnEncrypt != null)
+            Result = await OnEncrypt(InputText, Parameters);
+    }
+    private async Task Decrypt() {
+        if (OnDecrypt != null)
+            Result = await OnDecrypt(InputText, Parameters);
+    }
+}

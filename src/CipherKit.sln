@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherKit.App", "CipherKit.App\CipherKit.App.csproj", "{1305AAB4-C36C-4EA7-A959-893D3E86BEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherKit.Core", "CipherKit.Core\CipherKit.Core.csproj", "{5659A5CB-0BD9-49A2-A7FD-080003F5997A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1305AAB4-C36C-4EA7-A959-893D3E86BEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1305AAB4-C36C-4EA7-A959-893D3E86BEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1305AAB4-C36C-4EA7-A959-893D3E86BEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1305AAB4-C36C-4EA7-A959-893D3E86BEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5659A5CB-0BD9-49A2-A7FD-080003F5997A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5659A5CB-0BD9-49A2-A7FD-080003F5997A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5659A5CB-0BD9-49A2-A7FD-080003F5997A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5659A5CB-0BD9-49A2-A7FD-080003F5997A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

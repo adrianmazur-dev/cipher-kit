@@ -1,0 +1,32 @@
+@page "/ciphers/caesar"
+@using CipherKit.App.Components
+@using CipherKit.Core.Services
+@using CipherKit.Core.Interfaces
+@using System.Threading.Tasks
+
+<div class="card shadow-sm my-4">
+    <div class="card-header text-center">
+        <h3 class="mb-0">Caesar Cipher</h3>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label class="form-label">Shift</label>
+            <input type="number" class="form-control" @bind="Shift" placeholder="Enter shift value" />
+        </div>
+        <CipherForm TParams="int" Parameters="Shift" OnEncrypt="EncryptText" OnDecrypt="DecryptText" />
+    </div>
+</div>
+
+@code {
+    private int Shift { get; set; } = 3;
+    private async Task<string> EncryptText(string text, int shift)
+    {
+        var cipher = CipherManager.GetCaesarCipher(shift);
+        return await Task.FromResult(cipher.Encrypt(text));
+    }
+    private async Task<string> DecryptText(string text, int shift)
+    {
+        var cipher = CipherManager.GetCaesarCipher(shift);
+        return await Task.FromResult(cipher.Decrypt(text));
+    }
+}

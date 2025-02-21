@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="PlayfairTitle" xml:space="preserve">
+    <value>Szyfr Playfair</value>
+  </data>
+  <data name="CaesarTitle" xml:space="preserve">
+    <value>Szyfr Cezara</value>
+  </data>
+  <data name="Encrypt" xml:space="preserve">
+    <value>Szyfruj</value>
+  </data>
+  <data name="Decrypt" xml:space="preserve">
+    <value>Deszyfruj</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Wejście</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Wynik</value>
+  </data>
+  <data name="ToggleTheme" xml:space="preserve">
+    <value>Zmień motyw</value>
+  </data>
+</root>

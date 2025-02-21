@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="PlayfairTitle" xml:space="preserve">
+    <value>Playfair Cipher</value>
+  </data>
+  <data name="CaesarTitle" xml:space="preserve">
+    <value>Caesar Cipher</value>
+  </data>
+  <data name="Encrypt" xml:space="preserve">
+    <value>Encrypt</value>
+  </data>
+  <data name="Decrypt" xml:space="preserve">
+    <value>Decrypt</value>
+  </data>
+  <data name="Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="ToggleTheme" xml:space="preserve">
+    <value>Toggle Theme</value>
+  </data>
+</root>
