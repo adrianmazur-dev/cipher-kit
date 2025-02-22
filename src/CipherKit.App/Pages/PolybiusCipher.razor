@@ -1,0 +1,24 @@
+@page "/ciphers/polybius"
+@inject IStringLocalizer<Resource> Localizer
+
+<div class="card shadow-sm my-4">
+    <div class="card-header text-center">
+        <h3 class="mb-0">@Localizer["Polybius.Title"]</h3>
+    </div>
+    <div class="card-body">
+        <CipherForm TParams="object" Parameters="null" OnEncrypt="EncryptText" OnDecrypt="DecryptText" />
+    </div>
+</div>
+
+@code {
+    private async Task<string> EncryptText(string text, object _)
+    {
+        var cipher = CipherManager.GetPolybiusCipher();
+        return await Task.FromResult(cipher.Encrypt(text));
+    }
+    private async Task<string> DecryptText(string text, object _)
+    {
+        var cipher = CipherManager.GetPolybiusCipher();
+        return await Task.FromResult(cipher.Decrypt(text));
+    }
+}

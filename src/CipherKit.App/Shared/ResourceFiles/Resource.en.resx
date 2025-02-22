@@ -43,6 +43,13 @@
     <value>Enter Vigenère cipher key</value>
   </data>
 
+  <data name="Polybius.NavTitle" xml:space="preserve">
+    <value>Polybius</value>
+  </data>
+  <data name="Polybius.Title" xml:space="preserve">
+    <value>Polybius Cipher</value>
+  </data>
+
   <data name="Encrypt" xml:space="preserve">
     <value>Encrypt</value>
   </data>
