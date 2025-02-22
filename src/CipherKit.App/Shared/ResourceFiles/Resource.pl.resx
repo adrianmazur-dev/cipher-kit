@@ -50,6 +50,13 @@
     <value>Szyfr Polybiusza</value>
   </data>
 
+  <data name="Rsa.NavTitle" xml:space="preserve">
+    <value>RSA</value>
+  </data>
+  <data name="Rsa.Title" xml:space="preserve">
+    <value>Szyfr RSA</value>
+  </data>
+
   <data name="Encrypt" xml:space="preserve">
     <value>Szyfruj</value>
   </data>
@@ -67,5 +74,8 @@
   </data>
   <data name="ToggleTheme" xml:space="preserve">
     <value>Zmień motyw</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopiuj</value>
   </data>
 </root>

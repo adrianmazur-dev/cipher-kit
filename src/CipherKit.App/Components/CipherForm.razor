@@ -18,6 +18,9 @@
             <button class="btn btn-secondary" @onclick="Decrypt">
                 <i class="bi bi-unlock-fill me-1"></i> @Localizer["Decrypt"]
             </button>
+            <button class="btn btn-info" @onclick="CopyResultToInput">
+                <i class="bi bi-clipboard me-1"></i> @Localizer["Copy"]
+            </button>
         </div>
         <div>
             <label class="form-label">@Localizer["Result"]</label>
@@ -51,5 +54,9 @@
     private async Task Decrypt() {
         if (OnDecrypt != null)
             Result = await OnDecrypt(InputText, Parameters);
+    }
+
+    private void CopyResultToInput() {
+        InputText = Result;
     }
 }
