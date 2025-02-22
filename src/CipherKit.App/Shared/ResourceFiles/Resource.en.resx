@@ -30,6 +30,19 @@
     <value>Enter shift value</value>
   </data>
 
+  <data name="Vignere.NavTitle" xml:space="preserve">
+    <value>Vigenère</value>
+  </data>
+  <data name="Vignere.Title" xml:space="preserve">
+    <value>Vigenère Cipher</value>
+  </data>
+  <data name="Vignere.Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="Vignere.Key.Placeholder" xml:space="preserve">
+    <value>Enter Vigenère cipher key</value>
+  </data>
+
   <data name="Encrypt" xml:space="preserve">
     <value>Encrypt</value>
   </data>
